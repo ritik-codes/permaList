@@ -1,0 +1,46 @@
+<%- include("partials/header.ejs") %>
+
+  <div class="main">
+
+
+        <form action="/add" class="form" method="post">
+          <input type="text" name="text" id="text" placeholder="New Task" required autocomplete="off"> <!--name= text is imp because it used to hold variable and display it-->
+          <button class="button-63" type="submit" >+</button>
+        </form>
+
+        <ul>
+        <% for(todo of todos){ %>
+            <li class="todo">
+              <form action="/delete" method="post">
+                <input type="checkbox" onchange="this.form.submit()" id="checkbox" value="<%= todo.id %>" name = "Id">
+              </form>
+              <label for="checkbox" id="title<%=todo.id%>"><%= todo.items %></label>
+
+              <form class="edit" action="/edit" method="post">
+                <input type="hidden" name="updatedItemId" value="<%= todo.id %>">
+                <input id="input<%=todo.id%>" class="edit-form" type="text" name="updatedItemTitle" value="<%= todo.items %>" autocomplete="off"
+                  autofocus="true" hidden="true" />
+                <button id="done<%=todo.id%>" class="edit" type="submit" hidden>
+                  <span class="material-symbols-outlined">done</span>
+                </button>
+              </form>
+              <button id="edit<%=todo.id%>" class="edit" onclick="handler('<%=todo.id%>')">
+                <span class="material-symbols-outlined">edit</span>
+              </button>
+            </li>
+        <% } %>
+        </ul>
+
+      
+  </div>
+
+  <script>
+    function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true)
+      document.getElementById("edit" + id).setAttribute("hidden", true)
+      document.getElementById("done" + id).removeAttribute("hidden")
+      document.getElementById("input" + id).removeAttribute("hidden")
+    }
+  </script>
+
+<%- include("partials/footer.ejs") %>

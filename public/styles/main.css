@@ -1,0 +1,209 @@
+*{
+    font-family: 'Preahvihear', sans-serif;
+  }
+  
+  body{
+    background-image: url("/images/background.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+  
+  input[type=text]{
+    border-radius: 20px;
+    border: none;
+    height: 3em;
+    width: 20em;
+    font-size: 1em;
+    padding-left: 20px;
+    margin-left: 3em;
+  }
+  
+  .main{
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 255, 255, 0.29);
+    width: 30em;
+    margin: 0 auto;
+    padding: 10px;
+    margin-top: 10em;
+  
+  }
+  
+  .todo{
+    list-style-type: none;
+    margin-left: 25px;
+    color: #5B42F3;
+    font-size: 1.5em;
+    line-height: 2.5em;
+    display: flex;
+  }
+  
+  .nav li{
+    display: inline-block;
+    color: white;
+    margin-right: 2em;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  
+  .header{
+    width: 25em;
+    height: 4em;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    margin: 0 auto;
+    border-radius: 30px;
+    position: relative;
+    top: 8.5em;
+  }
+  
+  .heading{
+    color: white;
+    text-align: center;
+    font-size: 2em;
+  }
+  
+  .footer{
+    text-align: center;
+    color: white;
+    margin-bottom: 100px;
+  }
+  
+  .edit{
+    background: none;
+    border: none;
+    padding-left: 10px;
+  }
+
+  .edit:hover{
+    cursor: pointer;
+  }
+
+ .edit-form{
+   
+    width: 10em !important;
+    margin-left: 0px !important;
+    height: 2em !important;
+    color: inherit !important;
+  }
+
+  .edit-form:focus{
+    outline: 0;
+    user-select: all;
+  }
+
+  .material-symbols-outlined{
+    color: crimson;
+    transform: scale(1.5);
+  }
+
+  /* CSS submit button */
+  .button-63 {
+    position: relative;
+    top: 9px;
+    left: -12px;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: 0;
+    border-radius: 50%;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    font-size: 2em;
+    line-height: 1em;
+    min-width: 1.8em;
+    height: 1.8em;
+    padding: 15px 15px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  
+  .button-63:active,
+  .button-63:hover {
+    outline: 0;
+  }
+  
+  /*CSS checkbox*/
+  
+  input[type=checkbox]:checked + label{
+    text-decoration: line-through;
+  }
+  
+  input[type="checkbox"] {
+    appearance: none;
+    background-color: #fff;
+    margin: 0;
+    font: inherit;
+    color: currentColor;
+    width: 1.15em;
+    height: 1.15em;
+    border: 0.15em solid currentColor;
+    border-radius: 50%;
+    cursor: pointer;
+    display: inline-grid;
+    place-content: center;
+    margin-right: 10px;
+  }
+  
+  input[type="checkbox"]::before {
+    content: "";
+    width: 0.65em;
+    height: 0.65em;
+    transform: scale(0);
+    border-radius: 50%;
+    transition: 120ms transform ease-in-out;
+    background-color: #5B42F3;
+  }
+  
+  input[type="checkbox"]:checked::before {
+    transform: scale(1);
+  }
+  
+  @media only screen and (max-width: 426px) {
+    .main{
+      width: 70%;
+      margin-left: 12%;
+  
+    }
+  
+    input[type=text]{
+      width: 50%;
+      height: 30px;
+      margin-left: 10%;
+    }
+  
+    .header{
+      width: 15em;
+      height: 2em;
+    }
+  
+    .heading{
+      font-size: 1.2em;
+    }
+  
+    .button-63{
+      min-width: 55px;
+      font-size: 31px;
+      top: 6px;
+      left: -19px;
+      transform: scale(0.8);
+    }
+  
+    .todo{
+      font-size: 1em;
+      margin-left: -10px;
+    }
+  
+    .footer{
+      font-size: 0.6em;
+      margin-bottom: 100px;
+    }
+  }
+  
